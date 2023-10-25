@@ -86,3 +86,47 @@ toggleBtn.onclick = function() {
 
 // Hamburger Menu End
 // Navbar End
+
+
+// MODAL
+const openModalBtns = document.querySelectorAll(".openModalBtn");
+const closeModals = document.querySelectorAll(".close");
+
+openModalBtns.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modalId = button.getAttribute("data-modal");
+    const modal = document.getElementById(modalId);
+    modal.style.display = "block";
+  });
+});
+
+closeModals.forEach((closeButton) => {
+  closeButton.addEventListener("click", () => {
+    const modalId = closeButton.parentElement.parentElement.id;
+    const modal = document.getElementById(modalId);
+    modal.style.display = "none";
+  });
+});
+
+window.addEventListener("click", (e) => {
+  closeModals.forEach((closeButton) => {
+    const modalId = closeButton.parentElement.parentElement.id;
+    const modal = document.getElementById(modalId);
+    
+    if (e.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+// MODAL END
+
+
+
+// KELILING
+function kelPersegi() {
+    // parseFloat = memori sementara
+    var nilai1 = parseFloat(document.getElementById("sisiPersegi").value);
+    var hasil = 4 * nilai1;
+    document.getElementById("hasil_kel_persegi").textContent = hasil;
+}
+// KELILING END

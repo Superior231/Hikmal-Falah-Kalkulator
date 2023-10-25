@@ -17,11 +17,48 @@
 
     <div class="body">
 
-        <div class="header">
+        <!-- MODAL -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close close-modal1">&times;</span>
+                <h2>Keliling Persegi</h2>
+                <p>Rumus keliling persegi adalah 4 x sisi</p>
+                <div class="form">
+                    <input type="number" name="sisiPersegi" id="sisiPersegi" autocomplete="off" required />
+                    <label for="sisiPersegi" class="label-name">
+                      <span class="content-name">
+                        Masukkan panjang sisinya
+                      </span>
+                    </label>
+                </div><br>
+                <input type="button" value="Hitung" onclick="kelPersegi()" style="background-color: #257cc4; color: #fff; padding: 5px 30px; border: none; float: right;">
+                <p>Hasil: <span id="hasil_kel_persegi"></span></p>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close close-modal2">&times;</span>
+                <h2>Keliling Persegi Panjang</h2>
+                <p>Ini adalah modal untuk Keliling Persegi Panjang.</p>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close close-modal2">&times;</span>
+                <h2>Keliling Lingkaran</h2>
+                <p>Ini adalah modal untuk Keliling Persegi Panjang.</p>
+            </div>
+        </div>
+        <!-- MODAL END -->
+
+        <!-- Header -->
+        <div class="header" id="home">
             <!-- Navbar -->
             <nav class="navbar">
                 <div class="container">
-                    <a class="navbar-brand" href=""><span style="font-weight: 500;">Hikmal Kalkulator</span></a>
+                    <a class="navbar-brand" href=""><span style="font-weight: 600;">Hikmal Kalkulator</span></a>
                     <ul class="links">
                         <li id="navItems"><a href="#home" class="active">Home</a></li>
                         <li id="navItems"><a href="#kalkulator">Kalkulator</a></li>
@@ -34,7 +71,7 @@
                     <!-- hamburger menu end -->
                 </div>
             </nav>
-    
+
             <!-- dropdown menu -->
             <nav class="navbar_2" id="navbar_2">
                 <div class="dropdown_menu" id="dropdown_menu">
@@ -47,13 +84,60 @@
             <!-- Navbar End -->
 
             <div class="content-header">
-                
+                <div class="container">
+                    <h1 class="text-size">Selamat datang di Hikmal Kalkulator! Sederhana, Cepat, dan Akurat.</h1>
+                    <h1 class="text-size">Hitung semuanya dalam sekejap.</h1>
+
+                    <div class="button">
+                        <a href="#kalkulator"><button type="button" style="background-color: #257cc4;">Get Started!</button></a>
+                        <a href="#contact"><button type="button"><span></span>Contact Us</button></a>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- Header End -->
+
+
+        <!-- Content -->
+        <section class="content" id="kalkulator">
+            <div class="title" style="display: flex; justify-content: center; align-items: center; margin-top: 80px;">
+                <h2 class="text-size">Kalkulator</h2>
+            </div>
+            <div class="container">
+                <div class="card" onclick="">
+                    <center style="font-weight: 600;">Keliling</center>
+                    <div class="content">
+                        <a class="openModalBtn" data-modal="modal1"><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi</a>
+                        <a class="openModalBtn" data-modal="modal2"><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi Panjang</a>
+                        <a class="openModalBtn" data-modal="modal3"><i class="fa-solid fa-up-right-from-square"></i> keliling Lingkaran</a>
+                    </div>
+                </div>
+
+                <div class="card" onclick="">
+                    <center style="font-weight: 600;">Luas</center>
+                    <div class="content">
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi</a>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi Panjang</a>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> keliling Lingkaran</a>
+                    </div>
+                </div>
+
+                <div class="card" onclick="">
+                    <center style="font-weight: 600;">Volume</center>
+                    <div class="content">
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi</a>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi Panjang</a>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> keliling Lingkaran</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- Content End -->
 
 
     </div>
-
 
 
     <script src="script.js"></script>

@@ -2,7 +2,7 @@
 
 :root {
     /* Light Mode */
-    --body-color: #F7FBFC;
+    --body-color: #e4e9f7;
     --text-color: #090717;
     --primary-color: #FFB000;
     --secondary-color: #f0f1f5;
@@ -19,6 +19,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 .body {
     padding: 1px;
@@ -63,6 +64,18 @@
 /* Text End */
 
 
+/* RESPONSIF */
+@media (max-width: 768px) {
+    .content-header .container {
+      padding: 0 20px !important;
+    }
+    #kalkulator .container, .container-keliling, .container-luas, .container-volume {
+      padding: 0 20px !important;
+    }
+}
+/* RESPONSIF END */  
+
+
 
 /* Header */
 .header {
@@ -78,6 +91,7 @@
 
 /* Navbar */
 .navbar {
+    z-index: 100;
     width: 100%;
     margin: auto;
     padding: 10px 0;
@@ -240,9 +254,220 @@
     .navbar_2 .dropdown_menu {
         left: 1px;
         width: unset;
-        /* Unset biar navbar menunya full */
     }
 }
 
 /* Hamburger Menu End */
 /* Navbar End */
+
+
+/* Content Header */
+.content-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20%;
+}
+.content-header .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 70px;
+    justify-content: center;
+    align-items: center;
+}
+.content-header .container h1 {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* button */
+.content-header .container .button {
+    margin-top: 40px;
+}
+.content-header .container .button button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #257cc4;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.content-header .container .button button:hover {
+    background: #257cc4;
+    transition: 0.5s;
+}
+
+.content-header .container .button button:hover {
+    border: none;
+}
+@media (max-width: 767px) {
+    .content-header {
+        top: 10%;
+    }
+    .content-header .container .button {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;     
+    }
+    .content-header .container .button button {
+        width: 200px;
+    }
+}
+/* button end */
+/* Content Header End */
+
+
+
+/* Content */
+#kalkulator .container {
+    padding: 0 70px;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#kalkulator .container .card {
+    background-color: #f6f5ff;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 300px;
+    height: max-content;
+    padding: 30px 25px 50px 25px;
+    border-radius: 5px;
+}
+
+#kalkulator .container .content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+#kalkulator .container .content a, i {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-color);
+    opacity: .8;
+    margin-top: 5px;
+}
+#kalkulator .container .content a:hover {
+    text-decoration: underline;
+}
+/* Content End */
+
+
+
+
+/* MODAL */
+.modal {
+    z-index: 300;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 60%;
+    max-width: 600px;
+    margin: 180px auto;
+    padding: 30px;
+    border-radius: 5px;
+    position: relative;
+}
+.modal-content h2 {
+    margin-top: 5px;
+}
+.close {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+    .close {
+        top: 0px;
+        right: 10px;
+    }
+}
+
+
+.form {
+    width: 100%;
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+}
+  
+.form input {
+    width: 100%;
+    height: 100%;
+    color: var(--text-color);
+    padding-top: 30px;
+    border: none;
+    background-color: transparent;
+}
+.form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #afafaf;
+}
+.form label::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid var(--text-color);
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+  
+.content-name {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 1px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+.form input:focus {
+    outline: none;
+}
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+    transform: translateY(-130%);
+    font-size: 14px;
+    left: 0px;
+    color: var(--text-color);
+}
+  .form input:focus + .label-name::after,
+  .form input:valid + .label-name::after {
+    transform: translateX(0%);
+}
+  
+/* MODAL END */

@@ -40,7 +40,26 @@
             <div class="modal-content">
                 <span class="close close-modal2">&times;</span>
                 <h2>Keliling Persegi Panjang</h2>
-                <p>Ini adalah modal untuk Keliling Persegi Panjang.</p>
+                <p>Rumus keliling persegi panjang adalah 2 x (panjang + lebar)</p>
+                <div class="form">
+                    <input type="number" name="panjangPersegi" id="panjangPersegi" autocomplete="off" required />
+                    <label for="panjangPersegi" class="label-name">
+                      <span class="content-name">
+                        Masukkan panjang
+                      </span>
+                    </label>
+                </div>
+                <div class="form">
+                    <input type="number" name="lebarPersegi" id="lebarPersegi" autocomplete="off" required />
+                    <label for="lebarPersegi" class="label-name">
+                      <span class="content-name">
+                        Masukkan lebar
+                      </span>
+                    </label>
+                </div><br>
+
+                <input type="button" value="Hitung" onclick="kelPersegiPanjang()" style="background-color: #257cc4; color: #fff; padding: 5px 30px; border: none; float: right;">
+                <p>Hasil: <span id="hasil_kel_persegi_panjang"></span></p>
             </div>
         </div>
 
@@ -48,7 +67,17 @@
             <div class="modal-content">
                 <span class="close close-modal2">&times;</span>
                 <h2>Keliling Lingkaran</h2>
-                <p>Ini adalah modal untuk Keliling Persegi Panjang.</p>
+                <p>Rumus keliling lingkaran adalah π x diameter</p>
+                <div class="form">
+                    <input type="number" name="jari_jari" id="jari_jari" autocomplete="off" required />
+                    <label for="jari_jari" class="label-name">
+                      <span class="content-name">
+                        Masukkan jari - jarinya
+                      </span>
+                    </label>
+                </div><br>
+                <input type="button" value="Hitung" onclick="kelLingkaran()" style="background-color: #257cc4; color: #fff; padding: 5px 30px; border: none; float: right;">
+                <p>Hasil: <span id="hasil_kel_lingkaran"></span></p>
             </div>
         </div>
         <!-- MODAL END -->
@@ -105,7 +134,7 @@
             </div>
             <div class="container">
                 <div class="card" onclick="">
-                    <center style="font-weight: 600;">Keliling</center>
+                    <center style="font-weight: 600; font-size: 20px;">Keliling</center>
                     <div class="content">
                         <a class="openModalBtn" data-modal="modal1"><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi</a>
                         <a class="openModalBtn" data-modal="modal2"><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi Panjang</a>
@@ -114,7 +143,7 @@
                 </div>
 
                 <div class="card" onclick="">
-                    <center style="font-weight: 600;">Luas</center>
+                    <center style="font-weight: 600; font-size: 20px;">Luas</center>
                     <div class="content">
                         <a href=""><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi</a>
                         <a href=""><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi Panjang</a>
@@ -123,7 +152,7 @@
                 </div>
 
                 <div class="card" onclick="">
-                    <center style="font-weight: 600;">Volume</center>
+                    <center style="font-weight: 600; font-size: 20px;">Volume</center>
                     <div class="content">
                         <a href=""><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi</a>
                         <a href=""><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi Panjang</a>

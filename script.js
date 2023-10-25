@@ -125,8 +125,22 @@ window.addEventListener("click", (e) => {
 // KELILING
 function kelPersegi() {
     // parseFloat = memori sementara
-    var nilai1 = parseFloat(document.getElementById("sisiPersegi").value);
-    var hasil = 4 * nilai1;
+    var nilai1 = parseFloat(document.getElementById("sisiPersegi").value),
+        hasil  = 4 * nilai1;
     document.getElementById("hasil_kel_persegi").textContent = hasil;
+}
+
+function kelPersegiPanjang() {
+    var nilai1 = parseFloat(document.getElementById("panjangPersegi").value),
+        nilai2 = parseFloat(document.getElementById("lebarPersegi").value),
+        hasil  = 2 * (nilai1 + nilai2);
+    document.getElementById("hasil_kel_persegi_panjang").textContent = hasil;
+}
+
+function kelLingkaran() {
+    var nilai1     = parseFloat(document.getElementById("jari_jari").value),
+        hasil      = 3.14 * nilai1;
+        pembulatan = hasil.toFixed(2);
+    document.getElementById("hasil_kel_lingkaran").textContent = pembulatan;
 }
 // KELILING END

@@ -149,16 +149,70 @@
                 <span class="close close-modal2">&times;</span>
                 <h2>Volume Kubus</h2>
                 <p>Rumus volume kubus adalah r³</p>
+                <p style="opacity: 0.8;">r = panjang rusuk kubus</p>
                 <div class="form">
-                    <input type="number" name="luas_jari_jari" id="luas_jari_jari" autocomplete="off" required />
-                    <label for="luas_jari_jari" class="label-name">
+                    <input type="number" name="rusuk_kubus" id="rusuk_kubus" autocomplete="off" required />
+                    <label for="rusuk_kubus" class="label-name">
                       <span class="content-name">
                         Masukkan jari - jarinya
                       </span>
                     </label>
                 </div><br>
-                <input type="button" value="Hitung" onclick="luasLingkaran()" style="background-color: #257cc4; color: #fff; padding: 5px 30px; border: none; float: right;">
-                <p>Hasil: <span id="hasil_luas_lingkaran"></span></p>
+                <input type="button" value="Hitung" onclick="volKubus()" style="background-color: #257cc4; color: #fff; padding: 5px 30px; border: none; float: right;">
+                <p>Hasil: <span id="hasil_vol_kubus"></span></p>
+            </div>
+        </div>
+        
+        <div id="modal8" class="modal">
+            <div class="modal-content">
+                <span class="close close-modal2">&times;</span>
+                <h2>Volume Balok</h2>
+                <p>Rumus Balok adalah panjang x lebar x tinggi</p>
+                <div class="form">
+                    <input type="number" name="volPanjang" id="volPanjang" autocomplete="off" required />
+                    <label for="volPanjang" class="label-name">
+                      <span class="content-name">
+                        Masukkan panjang
+                      </span>
+                    </label>
+                </div>
+                <div class="form">
+                    <input type="number" name="volLebar" id="volLebar" autocomplete="off" required />
+                    <label for="volLebar" class="label-name">
+                      <span class="content-name">
+                        Masukkan lebar
+                      </span>
+                    </label>
+                </div>
+                <div class="form">
+                    <input type="number" name="volTinggi" id="volTinggi" autocomplete="off" required />
+                    <label for="volTinggi" class="label-name">
+                      <span class="content-name">
+                        Masukkan tinggi
+                      </span>
+                    </label>
+                </div><br>
+
+                <input type="button" value="Hitung" onclick="volBalok()" style="background-color: #257cc4; color: #fff; padding: 5px 30px; border: none; float: right;">
+                <p>Hasil: <span id="hasil_vol_balok"></span></p>
+            </div>
+        </div>
+        
+        <div id="modal9" class="modal">
+            <div class="modal-content">
+                <span class="close close-modal2">&times;</span>
+                <h2>Volume Bola</h2>
+                <p>Rumus volume bola adalah 4/3 x π x r³</p>
+                <div class="form">
+                    <input type="number" name="jari_bola" id="jari_bola" autocomplete="off" required />
+                    <label for="jari_bola" class="label-name">
+                      <span class="content-name">
+                        Masukkan jari - jarinya
+                      </span>
+                    </label>
+                </div><br>
+                <input type="button" value="Hitung" onclick="volBola()" style="background-color: #257cc4; color: #fff; padding: 5px 30px; border: none; float: right;">
+                <p>Hasil: <span id="hasil_vol_bola"></span></p>
             </div>
         </div>
         <!-- MODAL END -->
@@ -235,9 +289,9 @@
                 <div class="card" onclick="">
                     <center style="font-weight: 600; font-size: 20px;">Volume</center>
                     <div class="content">
-                        <a class="openModalBtn" data-modal="modal7"><i class="fa-solid fa-up-right-from-square"></i> Volume Persegi</a>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> Volume Persegi Panjang</a>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> Volume Lingkaran</a>
+                        <a class="openModalBtn" data-modal="modal7"><i class="fa-solid fa-up-right-from-square"></i> Volume Kubus</a>
+                        <a class="openModalBtn" data-modal="modal8"><i class="fa-solid fa-up-right-from-square"></i> Volume Balok</a>
+                        <a class="openModalBtn" data-modal="modal9"><i class="fa-solid fa-up-right-from-square"></i> Volume Bola</a>
                     </div>
                 </div>
             </div>

@@ -139,7 +139,7 @@ function kelPersegiPanjang() {
 
 function kelLingkaran() {
     var nilai1     = parseFloat(document.getElementById("jari_jari").value),
-        hasil      = 2 * 3.14 * nilai1;
+        hasil      = 2 * 3.14 * nilai1,
         pembulatan = hasil.toFixed(2);
     document.getElementById("hasil_kel_lingkaran").textContent = pembulatan;
 }
@@ -157,16 +157,29 @@ function luasPersegiPanjang() {
     document.getElementById("hasil_luas_persegi_panjang").textContent = hasil;
 }
 
-function luasSegitiga() {
-    var nilai1 = parseFloat(document.getElementById("panjangAlas").value),
-        nilai2 = parseFloat(document.getElementById("panjangTinggi").value),
-        hasil  = 0.5 * nilai1 * nilai2;
-    document.getElementById("hasil_luas_segitiga").textContent = hasil;
-}
-
 function luasLingkaran() {
-    var nilai1 = parseFloat(document.getElementById("luas_jari_jari").value);
+    var nilai1 = parseFloat(document.getElementById("luas_jari_jari").value),
         hasil  = 3.14 * (nilai1 * nilai1);
     document.getElementById("hasil_luas_lingkaran").textContent = hasil;
+}
+
+function volKubus() {
+    var nilai1 = parseFloat(document.getElementById("rusuk_kubus").value),
+        hasil  = nilai1 * nilai1 * nilai1;
+    document.getElementById("hasil_vol_kubus").textContent = hasil;
+}
+
+function volBalok() {
+    var nilai1 = parseFloat(document.getElementById("volPanjang").value),
+        nilai2 = parseFloat(document.getElementById("volLebar").value),
+        nilai3 = parseFloat(document.getElementById("volTinggi").value),
+        hasil  = nilai1 * nilai2 * nilai3;
+    document.getElementById("hasil_vol_balok").textContent = hasil;
+}
+
+function volBola() {
+    var nilai1 = parseFloat(document.getElementById("jari_bola").value),
+        hasil  = 1.3333 * 3.14 * (nilai1 * nilai1 * nilai1);
+    document.getElementById("hasil_vol_bola").textContent = hasil;
 }
 // KELILING END

@@ -129,14 +129,12 @@ function kelPersegi() {
         hasil  = 4 * nilai1;
     document.getElementById("hasil_kel_persegi").textContent = hasil;
 }
-
 function kelPersegiPanjang() {
     var nilai1 = parseFloat(document.getElementById("panjangPersegi").value),
         nilai2 = parseFloat(document.getElementById("lebarPersegi").value),
         hasil  = 2 * (nilai1 + nilai2);
     document.getElementById("hasil_kel_persegi_panjang").textContent = hasil;
 }
-
 function kelLingkaran() {
     var nilai1     = parseFloat(document.getElementById("jari_jari").value),
         hasil      = 2 * 3.14 * nilai1,
@@ -144,31 +142,30 @@ function kelLingkaran() {
     document.getElementById("hasil_kel_lingkaran").textContent = pembulatan;
 }
 
+// LUAS
 function luasPersegi() {
     var nilai1 = parseFloat(document.getElementById("luasPersegi").value),
         hasil  = nilai1 * nilai1;
     document.getElementById("hasil_luas_persegi").textContent = hasil;
 }
-
 function luasPersegiPanjang() {
     var nilai1 = parseFloat(document.getElementById("panjangPersegiPanjang").value),
         nilai2 = parseFloat(document.getElementById("lebarPersegiPanjang").value),
         hasil  = nilai1 * nilai2;
     document.getElementById("hasil_luas_persegi_panjang").textContent = hasil;
 }
-
 function luasLingkaran() {
     var nilai1 = parseFloat(document.getElementById("luas_jari_jari").value),
         hasil  = 3.14 * (nilai1 * nilai1);
     document.getElementById("hasil_luas_lingkaran").textContent = hasil;
 }
 
+// VOLUME
 function volKubus() {
     var nilai1 = parseFloat(document.getElementById("rusuk_kubus").value),
         hasil  = nilai1 * nilai1 * nilai1;
     document.getElementById("hasil_vol_kubus").textContent = hasil;
 }
-
 function volBalok() {
     var nilai1 = parseFloat(document.getElementById("volPanjang").value),
         nilai2 = parseFloat(document.getElementById("volLebar").value),
@@ -176,10 +173,8 @@ function volBalok() {
         hasil  = nilai1 * nilai2 * nilai3;
     document.getElementById("hasil_vol_balok").textContent = hasil;
 }
-
 function volBola() {
     var nilai1 = parseFloat(document.getElementById("jari_bola").value),
         hasil  = 1.3333 * 3.14 * (nilai1 * nilai1 * nilai1);
     document.getElementById("hasil_vol_bola").textContent = hasil;
 }
-// KELILING END

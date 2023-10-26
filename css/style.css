@@ -1,17 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-    /* Light Mode */
     --body-color: #e4e9f7;
     --text-color: #090717;
     --primary-color: #FFB000;
     --secondary-color: #f0f1f5;
-    --text-color-dark: rgb(10, 10, 10);
     --navbar-color: #fff;
-    --bg-scroll-bar: var(--body-color);
-    --thumb-color: #1c1738;
-    --thumb-hover-color: #231e44;
-    /* Light Mode End */
 }
 
 * {
@@ -59,6 +53,13 @@
     .container p.text-size {
       font-size: 10px;
     }
+    .container a.text-size,
+    center.text-size {
+        font-size: 13px;
+    }
+    .sosial-media i {
+        font-size: 18px;
+    }
 }
 /* Text End */
 
@@ -70,6 +71,12 @@
     }
     #kalkulator .container, .container-keliling, .container-luas, .container-volume {
       padding: 0 20px !important;
+    }
+    .contact .container .footer-content {
+        padding: 0 20px !important;
+    }
+    .contact .sosial-media {
+        padding: 0 20px !important;
     }
 }
 /* RESPONSIF END */  
@@ -370,6 +377,72 @@
 /* Content End */
 
 
+/* Contact */
+.contact {
+    background-color: var(--secondary-color);
+}
+.contact .container .footer-content {
+    width: 100%;
+    height: 100%;
+    padding: 0 70px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.contact .container .footer-content .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    height: max-content;
+    margin-top: 60px;
+    border-radius: 5px;
+}
+.contact .container .footer-content .card:nth-child(1) {
+    flex-basis: 500px;
+    padding-right: 150px;
+}
+@media (max-width: 620px) {
+    .contact .container .footer-content .card:nth-child(1) {
+        padding: 0;
+    }
+}
+.contact .container .footer-content .card:nth-child(2) {
+    flex-basis: max-content;
+}
+.contact .container .footer-content .card:nth-child(3) {
+    flex-basis: max-content;
+}
+.contact .footer-content .card .links {
+    display: flex;
+    flex-direction: column;
+}
+.contact .footer-content .card a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-color);
+    opacity: .8;
+    margin-top: 5px;
+}
+.contact .container .footer-content .card .links a:hover {
+    text-decoration: underline;
+}
+.contact .card .content {
+    display: flex;
+    flex-direction: column;
+}
+.contact .sosial-media {
+    font-size: 25px;
+    padding: 0 70px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+/* Contact End */
+
+
+
+
+
 
 
 /* MODAL */
@@ -475,5 +548,4 @@
   .form input:valid + .label-name::after {
     transform: translateX(0%);
 }
-  
 /* MODAL END */

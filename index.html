@@ -67,7 +67,7 @@
             <div class="modal-content">
                 <span class="close close-modal2">&times;</span>
                 <h2>Keliling Lingkaran</h2>
-                <p>Rumus keliling lingkaran adalah π x diameter</p>
+                <p>Rumus keliling lingkaran adalah 2 x π x jari - jari</p>
                 <div class="form">
                     <input type="number" name="jari_jari" id="jari_jari" autocomplete="off" required />
                     <label for="jari_jari" class="label-name">
@@ -78,6 +78,87 @@
                 </div><br>
                 <input type="button" value="Hitung" onclick="kelLingkaran()" style="background-color: #257cc4; color: #fff; padding: 5px 30px; border: none; float: right;">
                 <p>Hasil: <span id="hasil_kel_lingkaran"></span></p>
+            </div>
+        </div>
+
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close close-modal1">&times;</span>
+                <h2>Luas Persegi</h2>
+                <p>Rumus luas persegi adalah sisi x sisi</p>
+                <div class="form">
+                    <input type="number" name="luasPersegi" id="luasPersegi" autocomplete="off" required />
+                    <label for="luasPersegi" class="label-name">
+                      <span class="content-name">
+                        Masukkan panjang sisinya
+                      </span>
+                    </label>
+                </div><br>
+                <input type="button" value="Hitung" onclick="luasPersegi()" style="background-color: #257cc4; color: #fff; padding: 5px 30px; border: none; float: right;">
+                <p>Hasil: <span id="hasil_luas_persegi"></span></p>
+            </div>
+        </div>
+
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close close-modal2">&times;</span>
+                <h2>Luas Persegi Panjang</h2>
+                <p>Rumus luas persegi panjang adalah panjang x lebar</p>
+                <div class="form">
+                    <input type="number" name="panjangPersegiPanjang" id="panjangPersegiPanjang" autocomplete="off" required />
+                    <label for="panjangPersegiPanjang" class="label-name">
+                      <span class="content-name">
+                        Masukkan panjang
+                      </span>
+                    </label>
+                </div>
+                <div class="form">
+                    <input type="number" name="lebarPersegiPanjang" id="lebarPersegiPanjang" autocomplete="off" required />
+                    <label for="lebarPersegiPanjang" class="label-name">
+                      <span class="content-name">
+                        Masukkan lebar
+                      </span>
+                    </label>
+                </div><br>
+
+                <input type="button" value="Hitung" onclick="luasPersegiPanjang()" style="background-color: #257cc4; color: #fff; padding: 5px 30px; border: none; float: right;">
+                <p>Hasil: <span id="hasil_luas_persegi_panjang"></span></p>
+            </div>
+        </div>
+
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close close-modal2">&times;</span>
+                <h2>Luas Lingkaran</h2>
+                <p>Rumus luas lingkaran adalah π x r²</p>
+                <div class="form">
+                    <input type="number" name="volume_jari_jari" id="volume_jari_jari" autocomplete="off" required />
+                    <label for="volume_jari_jari" class="label-name">
+                      <span class="content-name">
+                        Masukkan jari - jarinya
+                      </span>
+                    </label>
+                </div><br>
+                <input type="button" value="Hitung" onclick="volumeL()" style="background-color: #257cc4; color: #fff; padding: 5px 30px; border: none; float: right;">
+                <p>Hasil: <span id="hasil_luas_lingkaran"></span></p>
+            </div>
+        </div>
+
+        <div id="modal7" class="modal">
+            <div class="modal-content">
+                <span class="close close-modal2">&times;</span>
+                <h2>Volume Kubus</h2>
+                <p>Rumus volume kubus adalah r³</p>
+                <div class="form">
+                    <input type="number" name="luas_jari_jari" id="luas_jari_jari" autocomplete="off" required />
+                    <label for="luas_jari_jari" class="label-name">
+                      <span class="content-name">
+                        Masukkan jari - jarinya
+                      </span>
+                    </label>
+                </div><br>
+                <input type="button" value="Hitung" onclick="luasLingkaran()" style="background-color: #257cc4; color: #fff; padding: 5px 30px; border: none; float: right;">
+                <p>Hasil: <span id="hasil_luas_lingkaran"></span></p>
             </div>
         </div>
         <!-- MODAL END -->
@@ -129,7 +210,7 @@
 
         <!-- Content -->
         <section class="content" id="kalkulator">
-            <div class="title" style="display: flex; justify-content: center; align-items: center; margin-top: 80px;">
+            <div class="title" style="display: flex; justify-content: center; align-items: center;">
                 <h2 class="text-size">Kalkulator</h2>
             </div>
             <div class="container">
@@ -145,18 +226,18 @@
                 <div class="card" onclick="">
                     <center style="font-weight: 600; font-size: 20px;">Luas</center>
                     <div class="content">
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi</a>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi Panjang</a>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> keliling Lingkaran</a>
+                        <a class="openModalBtn" data-modal="modal4"><i class="fa-solid fa-up-right-from-square"></i> Luas Persegi</a>
+                        <a class="openModalBtn" data-modal="modal5"><i class="fa-solid fa-up-right-from-square"></i> Luas Persegi Panjang</a>
+                        <a class="openModalBtn" data-modal="modal6"><i class="fa-solid fa-up-right-from-square"></i> Luas Lingkaran</a>
                     </div>
                 </div>
 
                 <div class="card" onclick="">
                     <center style="font-weight: 600; font-size: 20px;">Volume</center>
                     <div class="content">
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi</a>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> Keliling Persegi Panjang</a>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> keliling Lingkaran</a>
+                        <a class="openModalBtn" data-modal="modal7"><i class="fa-solid fa-up-right-from-square"></i> Volume Persegi</a>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> Volume Persegi Panjang</a>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i> Volume Lingkaran</a>
                     </div>
                 </div>
             </div>

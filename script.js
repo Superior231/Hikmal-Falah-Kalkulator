@@ -139,8 +139,34 @@ function kelPersegiPanjang() {
 
 function kelLingkaran() {
     var nilai1     = parseFloat(document.getElementById("jari_jari").value),
-        hasil      = 3.14 * nilai1;
+        hasil      = 2 * 3.14 * nilai1;
         pembulatan = hasil.toFixed(2);
     document.getElementById("hasil_kel_lingkaran").textContent = pembulatan;
+}
+
+function luasPersegi() {
+    var nilai1 = parseFloat(document.getElementById("luasPersegi").value),
+        hasil  = nilai1 * nilai1;
+    document.getElementById("hasil_luas_persegi").textContent = hasil;
+}
+
+function luasPersegiPanjang() {
+    var nilai1 = parseFloat(document.getElementById("panjangPersegiPanjang").value),
+        nilai2 = parseFloat(document.getElementById("lebarPersegiPanjang").value),
+        hasil  = nilai1 * nilai2;
+    document.getElementById("hasil_luas_persegi_panjang").textContent = hasil;
+}
+
+function luasSegitiga() {
+    var nilai1 = parseFloat(document.getElementById("panjangAlas").value),
+        nilai2 = parseFloat(document.getElementById("panjangTinggi").value),
+        hasil  = 0.5 * nilai1 * nilai2;
+    document.getElementById("hasil_luas_segitiga").textContent = hasil;
+}
+
+function luasLingkaran() {
+    var nilai1 = parseFloat(document.getElementById("luas_jari_jari").value);
+        hasil  = 3.14 * (nilai1 * nilai1);
+    document.getElementById("hasil_luas_lingkaran").textContent = hasil;
 }
 // KELILING END

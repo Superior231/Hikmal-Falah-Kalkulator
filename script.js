@@ -176,5 +176,6 @@ function volBalok() {
 function volBola() {
     var nilai1 = parseFloat(document.getElementById("jari_bola").value),
         hasil  = 1.3333 * 3.14 * (nilai1 * nilai1 * nilai1);
-    document.getElementById("hasil_vol_bola").textContent = hasil;
+        pembulatan = hasil.toFixed(2);
+    document.getElementById("hasil_vol_bola").textContent = pembulatan;
 }
